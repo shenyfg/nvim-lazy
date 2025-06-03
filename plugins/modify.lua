@@ -6,15 +6,14 @@ return {
         {
           "<leader>H",
           function()
-            require("harpoon"):list():add()
+            require("harpoon.mark").add_file()
           end,
           desc = "Harpoon File",
         },
         {
           "<leader>h",
           function()
-            local harpoon = require("harpoon")
-            harpoon.ui:toggle_quick_menu(harpoon:list())
+            require("harpoon.ui").toggle_quick_menu()
           end,
           desc = "Harpoon Quick Menu",
         },
@@ -24,7 +23,7 @@ return {
         table.insert(keys, {
           "<C-" .. i .. ">",
           function()
-            require("harpoon"):list():select(i)
+            require("harpoon.ui").nav_file(i)
           end,
           desc = "Harpoon to File " .. i,
         })
