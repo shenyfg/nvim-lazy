@@ -9,7 +9,7 @@ local opt = vim.opt
 g.autoformat = false
 
 -- Disable animations
-g.snacks_animate = false
+-- g.snacks_animate = false
 
 -- Disable default slow undo
 opt.undofile = false
@@ -19,7 +19,7 @@ opt.undolevels = 1000
 -- opt.mouse = ""
 
 -- Disable shining cursorline
-opt.cursorline = false
+opt.cursorlineopt = "number"
 
 -- Disable showing spaces
 opt.list = false
