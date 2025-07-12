@@ -69,6 +69,10 @@ map({ "i" }, "<C-l>", "<C-x><C-l>", { desc = "Line Compeletion in insert mode" }
 -- Leetcode context mapping
 map({ "n" }, "<leader>dl", ":%s/©leetcode//g<CR>", { desc = "Delete leetcode watermark" })
 
+-- Run cmds directly in neovim
+map({ "n" }, "R", "V:!bash<CR>", { desc = "Bash run" })
+map({ "v" }, "R", ":!bash<CR>", { desc = "Bash run with selected" })
+
 -- Shortcuts for `Till` operations
 map("n", "c ", "ct ", opts)
 map("n", "c,", "ct,", opts)

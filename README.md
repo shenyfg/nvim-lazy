@@ -1,4 +1,8 @@
+My personal Neovim configuration based on [LazyVim](https://www.lazyvim.org).
+
+🚀How to start:
+
 ```bash
-rm -rf ~/.config/nvim/lua
+mv ~/.config/nvim/lua ~/.config/nvim/lua_bak
 git clone git@github.com:shenyfg/nvim_config.git ~/.config/nvim/lua
 ```

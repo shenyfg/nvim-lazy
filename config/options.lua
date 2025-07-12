@@ -9,7 +9,7 @@ local opt = vim.opt
 g.autoformat = false
 
 -- Disable animations
--- g.snacks_animate = false
+g.snacks_animate = false
 
 -- Disable default slow undo
 opt.undofile = false

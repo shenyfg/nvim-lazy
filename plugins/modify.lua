@@ -17,9 +17,23 @@ return {
           end,
           desc = "Harpoon Quick Menu",
         },
+        {
+          "<C-n>",
+          function()
+            require("harpoon.ui").nav_next()
+          end,
+          desc = "Harpoon navigates to next mark ",
+        },
+        {
+          "<C-p>",
+          function()
+            require("harpoon.ui").nav_prev()
+          end,
+          desc = "Harpoon navigates to previous mark ",
+        },
       }
 
-      for i = 1, 5 do
+      for i = 1, 9 do
         table.insert(keys, {
           "<C-" .. i .. ">",
           function()
