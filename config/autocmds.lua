@@ -19,6 +19,21 @@ autocmd({ "TextChanged", "TextChangedI" }, {
   end,
 })
 
+-- Auto refresh when file is changed by outside apps like claude code
+autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  pattern = "*",
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+})
+-- 文件外部变动后提示
+autocmd({ "FileChangedShellPost" }, {
+  pattern = "*",
+  command = [[echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]],
+})
+
 -- Python --
 autocmd("FileType", {
   pattern = "python",

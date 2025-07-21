@@ -15,8 +15,8 @@ g.snacks_animate = false
 opt.undofile = false
 opt.undolevels = 1000
 
--- Disable mouse, because of the alttab switching issue
--- opt.mouse = ""
+-- Disable swapfile
+opt.swapfile = false
 
 -- Disable shining cursorline
 opt.cursorlineopt = "number"
